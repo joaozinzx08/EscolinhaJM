@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Escolar - Upload de Arquivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>SISTEMA ESCOLAR</h2>
+            <div class="admin-icon">🎓</div>
+            <strong>ADMINISTRADOR</strong>
+        </div>
+
+        <nav>
+            <button class="menu-item active" data-page="dashboard">Painel</button>
+            <button class="menu-item" data-page="students">Alunos</button>
+            <button class="menu-item" data-page="materials">Materiais</button>
+            <button class="menu-item" data-page="announcement">Avisos</button>
+            <button class="menu-item" data-page="settings">Critérios</button>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <input type="text" placeholder="Pesquisar...">
+
+            <div class="user-area">
+                <span>🔔</span>
+                <div class="perfil">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrEqyqEdZCe7E-ITMxGYaIP1lre38M7rORVg&s" alt="Perfil">
+                <span>Administrador</span>
+                </div>
+            </div>
+        </header>
+
+        <section id="dashboard" class="page active-page">
+            <p class="breadcrumb">Início &gt; Painel</p>
+
+            <div class="cards">
+                <div class="card dark">
+                    <h3>Arquivos</h3>
+                    <strong id="totalArquivos">0</strong>
+                    <small>Total de uploads</small>
+                </div>
+
+                <div class="card green">
+                    <h3>PDFs</h3>
+                    <strong id="totalPdf">0</strong>
+                    <small>Arquivos PDF</small>
+                </div>
+
+                <div class="card mint">
+                    <h3>Imagens</h3>
+                    <strong id="totalImagens">0</strong>
+                    <small>PNG e JPG</small>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h2>Resumo do sistema</h2>
+                <p>
+                    Sistema escolar desenvolvido para envio e download de atividades.
+                    O sistema valida o tipo do arquivo, limita o tamanho máximo e salva
+                    os metadados obrigatórios.
+                </p>
+            </div>
+        </section>
+
+        <section id="students" class="page">
+            <p class="breadcrumb">Início &gt; Alunos</p>
+
+            <h2>Entrega de atividades</h2>
+
+            <div class="tabs">
+                <button class="tab active">Todos os alunos</button>
+                <button class="tab">Adicionar aluno</button>
+                <button class="tab">Enviar arquivo</button>
+            </div>
+
+            <form id="formulario" class="upload-box">
+                <label>Nome do aluno</label>
+                <input 
+                    type="text" 
+                    name="nomeAluno" 
+                    placeholder="Digite o nome do aluno" 
+                    required
+                >
+
+                <label>Arquivo da atividade</label>
+                <input 
+                    type="file" 
+                    name="arquivo" 
+                    accept=".png,.jpg,.jpeg,.pdf" 
+                    required
+                >
+
+                <p class="info">
+                    Tipos permitidos: PNG, JPG e PDF. Tamanho máximo: 5 MB.
+                </p>
+
+                <button type="submit">Enviar arquivo</button>
+            </form>
+
+            <div id="mensagem"></div>
+
+            <div class="table-area">
+                <h3>Arquivos enviados</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Arquivo</th>
+                            <th>Tamanho</th>
+                            <th>Tipo MIME</th>
+                            <th>Data</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaArquivos"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="materials" class="page">
+            <p class="breadcrumb">Início &gt; Materiais</p>
+
+            <h2>Materiais disponíveis</h2>
+
+            <div class="panel">
+                <p>
+                    Os arquivos enviados pelos alunos ficam disponíveis para download
+                    na tabela da página de alunos.
+                </p>
+            </div>
+        </section>
+
+        <section id="announcement" class="page">
+            <p class="breadcrumb">Início &gt; Avisos</p>
+
+            <h2>Avisos escolares</h2>
+
+            <div class="panel">
+                <p>
+                    Sistema criado para entrega de atividades escolares com upload,
+                    download, validação de arquivos e armazenamento de metadados.
+                </p>
+            </div>
+        </section>
+
+        <section id="settings" class="page">
+            <p class="breadcrumb">Início &gt; Critérios</p>
+
+            <h2>Critérios da atividade</h2>
+
+            <div class="panel">
+                <ul>
+                    <li>Upload de arquivos</li>
+                    <li>Endpoint de download</li>
+                    <li>Validação de tamanho máximo: 5 MB</li>
+                    <li>Validação de tipo MIME</li>
+                    <li>Tipos permitidos: PNG, JPG e PDF</li>
+                    <li>Salvamento de metadados</li>
+                    <li>Nome do arquivo</li>
+                    <li>Tamanho do arquivo</li>
+                    <li>Tipo MIME</li>
+                    <li>Data do upload</li>
+                    <li>Nome do aluno</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "aluno": "Joao",
+    "nomeArquivo": "Document.pdf",
+    "tamanho": 19540,
+    "mimeType": "application/pdf",
+    "dataUpload": "25/05/2026, 10:19:36",
+    "arquivoSalvo": "1779715176452-Document.pdf"
+  },
+  {
+    "aluno": "Joao",
+    "nomeArquivo": "AtivMTimportante.jpg",
+    "tamanho": 6512,
+    "mimeType": "image/jpeg",
+    "dataUpload": "25/05/2026, 10:32:59",
+    "arquivoSalvo": "1779715979284-AtivMTimportante.jpg"
+  },
+  {
+    "aluno": "Joao",
+    "nomeArquivo": "atividade.jpg",
+    "tamanho": 7934,
+    "mimeType": "image/jpeg",
+    "dataUpload": "25/05/2026, 10:36:06",
+    "arquivoSalvo": "1779716166473-atividade.jpg"
+  }
+]
